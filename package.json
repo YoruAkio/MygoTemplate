@@ -1,0 +1,34 @@
+{
+  "name": "mygo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "mygo dev",
+    "dev:ios": "mygo dev -platform ios",
+    "dev:android": "mygo dev -platform android",
+    "build": "mygo build",
+    "generate": "mygo generate",
+    "dev:web": "bun --filter @mygo/client dev",
+    "build:web": "bun --filter @mygo/client build",
+    "check": "bun run lint && bun --filter '*' check",
+    "lint": "oxlint --ignore-path=.oxlintignore apps packages",
+    "format": "oxfmt --ignore-path=.oxfmtignore .",
+    "format:check": "oxfmt --check --ignore-path=.oxfmtignore .",
+    "bump-version": "bun scripts/bump-version.ts"
+  },
+  "dependencies": {
+    "mygo-runtime": "^0.10.0"
+  },
+  "devDependencies": {
+    "mygo-cli": "^0.10.0",
+    "oxfmt": "^0.76.0",
+    "oxlint": "^1.91.0",
+    "typescript": "^7",
+    "vite": "^8"
+  }
+}

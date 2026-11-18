@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@mygo/ui": ["../../packages/ui/src/index.ts"],
+      "@mygo/ui/*": ["../../packages/ui/src/*"]
+    }
+  },
+  "include": ["src"]
+}

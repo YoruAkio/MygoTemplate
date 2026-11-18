@@ -1,0 +1,11 @@
+{
+  "plugins": ["react", "typescript", "oxc", "unicorn"],
+  "categories": { "correctness": "error", "suspicious": "warn" },
+  "env": { "browser": true, "es2024": true },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "unicorn/no-array-sort": "off",
+    "unicorn/consistent-function-scoping": "off"
+  },
+  "ignorePatterns": ["**/dist/**", "**/build/**", "**/node_modules/**"]
+}

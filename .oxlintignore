@@ -1,0 +1,5 @@
+apps/*/dist/**
+apps/*/src/mygo.ts
+build/**
+node_modules/**
+bun.lock
